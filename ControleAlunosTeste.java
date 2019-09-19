@@ -19,6 +19,16 @@ class ControleAlunosTeste {
 		controle.registraAlunoRespondeu("1234567");
 		controle.registraAlunoRespondeu("11111111");
 	}
+	
+	@Test
+	void testTestaStringVaziaOuNula() {
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+		    controle.testaStringVaziaOuNula("");;
+		  });
+		Assertions.assertThrows(NullPointerException.class, () -> {
+			controle.testaStringVaziaOuNula(null);
+		});
+	}
 
 	@Test
 	void testCadastraAluno() {

@@ -21,6 +21,18 @@ public class ControleAlunos {
 	 */
 	private ArrayList<Aluno> alunosResponderam = new ArrayList<>();
 	/**
+	 * Testa se a String é vazia ou nula
+	 * 
+	 * @param string a String a ser testada
+	 */
+	public void testaStringVaziaOuNula(String string) {
+		if(string == null) {
+			throw new NullPointerException();
+		} else if(string.equals("")) {
+			throw new IllegalArgumentException();
+		}
+	}
+	/**
 	 * Cadastra um aluno no controle de alunos.
 	 * 
 	 * @param matricula a matrícula do aluno
